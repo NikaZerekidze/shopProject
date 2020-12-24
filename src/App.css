@@ -1,0 +1,291 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+@font-face
+{
+  font-family: alfa;
+  src: url('fonts/alfa/AlfaSlabOne-Regular.ttf');
+  
+}
+
+@font-face
+{
+  font-family: bree;
+  src: url('fonts/Bree_Serif/BreeSerif-Regular.ttf');
+ 
+}
+body
+{
+  background-color: #f6f5f5;
+  position: relative;
+}
+.Home
+{
+  position: absolute;
+  background-color: #f6f5f5;
+}
+.user
+{
+  position: absolute;
+  margin: 0;
+  top: 10px;
+  left: 10px;
+  font-size: 15px;
+  background-color: turquoise;
+}
+.registration
+{
+  font-size:  15px;;
+  z-index: 1;
+  font-family: bree;
+}
+.logout
+{
+  font-size:  30px;
+  font-family: bree;
+  top: 50px;
+  z-index: 1;
+}
+.slider
+{
+  overflow: hidden;
+  position: relative;
+}
+.background
+{
+  z-index: 0;
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation:  slider infinite;
+  animation-duration: 40s;
+  transition-duration: 2s;
+  background-size: cover;
+
+  
+
+}
+.slider figure img
+{
+  width: 20%;
+  height: 100vh;
+  float: left;
+  object-fit: cover;
+  background-size: cover;
+  
+}
+@keyframes slider
+{
+  0%  {left: 0;}
+  20% {left: 0;}
+  25% {left: -100%;}
+  45% {left: -100%;}
+  50% {left: -200%;}
+  70% {left: -200%;}
+  80% {left: -300%;}
+  90% {left: -300%;}
+  100% {left: -400%;}
+}
+
+h1
+{
+  text-align: center;
+  position: absolute;
+  padding-top: 10%;
+  left: 20%;
+  right: 20%;
+  z-index: 1;
+  font-family: bree;
+}
+
+.scrolldown
+{
+  height: 50px;
+  width: 20px;
+  border-radius: 50px;
+  border: 3px solid black;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.arrow
+{
+  
+  width: 5px;
+  height: 5px;
+  display: block;
+  border: 2px solid transparent;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  animation: slide-down 2s linear infinite;
+
+ 
+ 
+}
+.slider:hover .scrolldown{
+  opacity: 1;
+
+}
+
+.learnMore-box
+{
+  position: absolute;
+  width: 500px;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  top: 230px;
+  text-align: center;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity .35s ease;
+
+}
+.learn-more
+{
+  font-size: 20px;
+  padding: 12px 48px;
+  text-align: center;
+  color: black;
+  border: solid 2px white;
+  z-index: 1;
+  cursor: pointer;
+  font-family: bree;
+
+ 
+}
+
+.slider:hover .learnMore-box{
+  opacity: 1;
+
+}
+
+
+
+@keyframes slide-down
+{
+  0%{ opacity: 0; transform: translateY(-19px) rotate(45deg) ; }
+  100%{opacity: 1; transform: translateY(19px) rotate(45deg);  }
+
+}
+
+h2
+{
+  text-align: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+.products
+{
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  height: auto;
+
+  
+}
+.imgBox
+{
+  width: 200px;
+  height: 300px;
+  margin-bottom: 30px;
+  background-color: rgb(120, 183, 224);
+  position: relative;
+}
+.img
+{
+
+  width:  100%;
+  height: 100%;
+  /* object-fit: contain; */
+  opacity: 0.8;
+  transition-duration: 0.2s;
+  transition-delay: 0.08s;
+
+ 
+}
+.button
+{
+
+  position: absolute;
+  left: 70px;
+  display: none;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: steelblue;
+  font-size: 20px;
+  border: 0;
+  border-radius: 15px;
+  padding: 6px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  font-family: bree;
+}
+
+.imgBox:hover .img
+{
+
+  transform: scale(1.1);
+  opacity: 1;
+  
+}
+
+.imgBox:hover .button
+{
+  display: block;
+} 
+
+.see_more
+{
+  text-align: center;
+  margin-bottom: 30px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+.see_more_butt
+{
+  font-size: 25px;
+  font-family: bree;
+  border: 0;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  border-radius: 15px;
+  padding: 6px;
+  background-color: rgb(180, 181, 250);
+  transition-duration: 0.5s;
+  width: 180px;
+
+}
+
+.see_more_butt:hover
+{
+  font-size: 30px;
+  background-color: rgb(134, 136, 255);
+  width: 190px;
+  
+}
+
+
+a
+{
+  text-decoration: none !important;
+  color: black;
+}
